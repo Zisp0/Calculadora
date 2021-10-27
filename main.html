@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href='CSS/estilos.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <title>CIphone</title>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="cuerpoCalc">
+            <div id="pant" class="pantalla">
+                <p id="resultSec2"></p>
+                <p id="resultado">0</p>
+                <p id="resultSec1"></p>
+            </div>
+
+            <img id="inicio" src="IMG/calculadora.png" alt="calculadora" onclick="iniciar()" onmouseover="resaltar('inicio')" onmouseout="desresaltar('inicio')">
+            <p id="creditos"> Desarrollado por: César Torres y Faiber Hernández</p>
+            <div id="botonera" class="botonera">
+                <div class="colum4 txtNegro">
+                    <p id="AC" class="btn bgGrisClaro" onclick="del()" onmousedown="downBtnGris('AC')" onmouseup="upBtnGris('AC')"
+                    onmouseover="resaltar('AC')" onmouseout="desresaltar('AC')">AC</p>
+                    <p id="masmenos" class="btn bgGrisClaro" onmousedown="downBtnGris('masmenos')" onmouseup=" upBtnGris('masmenos')"
+                    onmouseover="resaltar('masmenos')" onmouseout="desresaltar('masmenos')">
+                        <img src="IMG/mjomeno.png" id="symbol">
+                    </p>
+                    <p id="porcent" class="btn bgGrisClaro" onmousedown="downBtnGris('porcent')" onmouseup=" upBtnGris('porcent')" onmouseover="resaltar('porcent')" onmouseout="desresaltar('porcent')">%</p>
+                    <p class="btn txtBlanco bgNaranja" id="division" onclick="add('div')" onmousedown=" downBtnNaranja('division')" onmouseup="upBtnNaranja('division')" onmouseover="resaltar('division')" onmouseout="desresaltar('division')">&#xF7;</p>
+                </div>
+
+                <div class="colum4 txtBlanco">
+                    <p id="num7" class="btn bgGrisOscuro" onclick="add(7)"
+                    onmousedown="downBtnGrisOscuro('num7')" onmouseup=" upBtnGrisOscuro('num7')"
+                    onmouseover="resaltar('num7')" onmouseout="desresaltar('num7')">7</p>
+                    <p id="num8" class="btn bgGrisOscuro" onclick="add(8)"
+                    onmousedown="downBtnGrisOscuro('num8')" onmouseup=" upBtnGrisOscuro('num8')"
+                    onmouseover="resaltar('num8')" onmouseout="desresaltar('num8')">8</p>
+                    <p id="num9" class="btn bgGrisOscuro" onclick="add(9)"
+                    onmousedown="downBtnGrisOscuro('num9')" onmouseup=" upBtnGrisOscuro('num9')"
+                    onmouseover="resaltar('num9')" onmouseout="desresaltar('num9')">9</p>
+                    <p id="por" class="btn bgNaranja" onclick="add('por')"
+                    onmousedown="downBtnNaranja('por')" onmouseup=" upBtnNaranja('por')"
+                    onmouseover="resaltar('por')" onmouseout="desresaltar('por')">&#215;</p>
+                </div>
+
+                <div class="colum4 txtBlanco">
+                    <p id="num4" class="btn bgGrisOscuro" onclick="add(4)"
+                    onmousedown="downBtnGrisOscuro('num4')" onmouseup=" upBtnGrisOscuro('num4')"
+                    onmouseover="resaltar('num4')" onmouseout="desresaltar('num4')">4</p>
+                    <p id="num5"  class="btn bgGrisOscuro" onclick="add(5)"
+                    onmousedown="downBtnGrisOscuro('num5')" onmouseup=" upBtnGrisOscuro('num5')"
+                    onmouseover="resaltar('num5')" onmouseout="desresaltar('num5')">5</p>
+                    <p id="num6"  class="btn bgGrisOscuro" onclick="add(6)"
+                    onmousedown="downBtnGrisOscuro('num6')" onmouseup=" upBtnGrisOscuro('num6')"
+                    onmouseover="resaltar('num6')" onmouseout="desresaltar('num6')">6</p>
+                    <p id="men"  class="btn bgNaranja" onclick="add('men')"
+                    onmousedown="downBtnNaranja('men')" onmouseup=" upBtnNaranja('men')"
+                    onmouseover="resaltar('men')" onmouseout="desresaltar('men')">-</p>
+                </div>
+                
+                <div class="colum4 txtBlanco">
+                    <p id="num1" class="btn bgGrisOscuro" onclick="add(1)"
+                    onmousedown="downBtnGrisOscuro('num1')" onmouseup=" upBtnGrisOscuro('num1')"
+                    onmouseover="resaltar('num1')" onmouseout="desresaltar('num1')">1</p>
+                    <p id="num2" class="btn bgGrisOscuro" onclick="add(2)"
+                    onmousedown="downBtnGrisOscuro('num2')" onmouseup=" upBtnGrisOscuro('num2')"
+                    onmouseover="resaltar('num2')" onmouseout="desresaltar('num2')">2</p>
+                    <p id="num3" class="btn bgGrisOscuro" onclick="add(3)"
+                    onmousedown="downBtnGrisOscuro('num3')" onmouseup=" upBtnGrisOscuro('num3')"
+                    onmouseover="resaltar('num3')" onmouseout="desresaltar('num3')">3</p>
+                    <p id="mas" class="btn bgNaranja" onclick="add('mas')"
+                    onmousedown="downBtnNaranja('mas')" onmouseup=" upBtnNaranja('mas')"
+                    onmouseover="resaltar('mas')" onmouseout="desresaltar('mas')">+</p>
+                </div>
+
+                <div class="colum3 txtBlanco">
+                    <p class="btn bgGrisOscuro" id="btn0" onclick="add(0)"
+                    onmousedown="downBtnGrisOscuro('btn0')" onmouseup=" upBtnGrisOscuro('btn0')"
+                    onmouseover="resaltar('btn0')" onmouseout="desresaltar('btn0')">0</p>
+                    <p id="punto" class="btn bgGrisOscuro" onclick="add('.')"
+                    onmousedown="downBtnGrisOscuro('punto')" onmouseup=" upBtnGrisOscuro('punto')"
+                    onmouseover="resaltar('punto')" onmouseout="desresaltar('punto')">.</p>
+                    <p id="igual" class="btn bgNaranja" onclick="add('ig')"
+                    onmousedown="downBtnNaranja('igual')" onmouseup=" upBtnNaranja('igual')"
+                    onmouseover="resaltar('igual')" onmouseout="desresaltar('igual')">=</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="JS/funciones.js"></script>
+</body>
+</html>
